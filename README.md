@@ -1,2 +1,2 @@
 # Angular-PIM
-A Demo-PIM basend on AngularJS
+A Demo-PIM based on AngularJS for demonstrating how powerful a rich client application can be.
