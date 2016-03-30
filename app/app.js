@@ -6,7 +6,7 @@
 
   angular.module( 'AngularPim' ).config( config );
 
-  config.$inject( '$stateProvider', '$urlRouterProvider', '$translateProvider', '$mdThemingProvider', '$httpProvider' );
+  config.$inject = [ '$stateProvider', '$urlRouterProvider', '$translateProvider', '$mdThemingProvider', '$httpProvider' ];
 
 
   function config( $stateProvider, $urlRouterProvider, $translateProvider, $mdThemingProvider, $httpProvider )
@@ -14,7 +14,7 @@
     // Theming
     $mdThemingProvider
       .theme( 'default' )
-      .primaryPalette('blue')
+      .primaryPalette('teal')
       .accentPalette('red');
 
     // Uebersetzung hinzufügen
