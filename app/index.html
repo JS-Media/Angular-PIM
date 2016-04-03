@@ -13,17 +13,23 @@
     <link rel="stylesheet" href="css/styles.css"/>
   </head>
   <body ng-app="AngularPim" layout="column" ng-cloak>
-    <md-toolbar md-whiteframe="4" class="md-hue-2">
+    <md-toolbar md-whiteframe="4" class="md-hue-2" ng-controller="appBarController as controller">
       <div class="md-toolbar-tools">
-        <h2>Logo</h2>
+        <md-button class="md-icon-button" hide-gt-sm ng-click="controller.toggleMainSideMenu()" aria-label="Toggle Menu">
+          <md-icon md-font-set="material-icons">menu</md-icon>
+        </md-button>
+        <a ng-href="#" id="home">
+          <md-icon class="size-36" md-svg-src="img/mjs-w.svg"></md-icon>
+        </a>
+        <h2>Media JS</h2>
         <span flex></span>
         <md-button class="md-icon-button" aria-label="Favorite">
-          <md-icon md-font-set="material-icons"><i class="material-icons">more_vert</i></md-icon>
+          <md-icon md-font-set="material-icons">more_vert</md-icon>
         </md-button>
       </div>
     </md-toolbar>
     <div layout="row">
-      <md-sidenav class="site-sidenav md-sidenav-left" md-whiteframe="4" md-component-id="left" ng-click="ul.toggleList()" aria-label="Show User List" md-is-locked-open="$mdMedia('gt-sm')">
+      <md-sidenav class="site-sidenav md-sidenav-left" md-whiteframe="4" md-component-id="main-menu" ng-click="ul.toggleList()" aria-label="Show User List" md-is-locked-open="$mdMedia('gt-sm')">
         <md-toolbar md-whiteframe="4" class="md-tall">
           <div class="md-toolbar-tools">
             <h3>PIM</h3>
@@ -41,9 +47,6 @@
       <div flex layout="column" tabIndex="-1" role="main">
         <md-toolbar  md-whiteframe="4">
           <div class="md-toolbar-tools">
-            <md-button id="main" class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
-              <md-icon md-svg-icon="menu"></md-icon>
-            </md-button>
             <h3>Angular Material - Starter App</h3>
           </div>
         </md-toolbar>
@@ -68,6 +71,7 @@
 
     <script src="i8ln/de_DE.js"></script>
     <script src="app.js"></script>
+    <script src="components/appBar/appBarController.js"></script>
   </body>
 </html>
 

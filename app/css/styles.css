@@ -1,0 +1,25 @@
+/******************************
+ * Menu
+ *****************************/
+#home
+{
+  padding-right: 8px;
+  margin-right: 6px;
+}
+
+/******************************
+ * Icon
+ *****************************/
+
+md-icon.size-16{
+  height: 16px;
+  width: 16px;
+}
+md-icon.size-36{
+  height: 36px;
+  width: 36px;
+}
+md-icon.size-48{
+  height: 48px;
+  width: 48px;
+}
