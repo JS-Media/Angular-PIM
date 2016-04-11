@@ -22,6 +22,75 @@
       .translations( 'de_DE', translation_de_DE )
       .preferredLanguage( 'de_DE' )
       .useSanitizeValueStrategy('escaped');
+
+    // Default-State (wird beim Start der App automatisch gewählt)
+    $urlRouterProvider.otherwise ('/dashboard');
+
+    $stateProvider.state( 'dashboard',
+    {
+      url: '/dashboard',
+      views:
+      {
+        'mainApplication':
+        {
+          templateUrl: 'components/dashboard/dashboard.html',
+          controller: 'dashboardController as controller'
+        }
+      }
+    });
+
+    $stateProvider.state( 'pim',
+    {
+      url: '/pim',
+      abstract: true,
+      views:
+      {
+        'mainApplication':
+        {
+          templateUrl: 'components/pim/pimBase.html',
+          controller: 'pimBaseController as controller'
+        }
+      }
+    });
+
+    $stateProvider.state( 'pim.articleList',
+    {
+      url: '/pim/articleList',
+      views:
+      {
+        'pimContent':
+        {
+          templateUrl: 'components/pim/article/articleList.html',
+          controller: 'articleListController as controller'
+        }
+      }
+    });
+
+    $stateProvider.state( 'pim.articleDetail',
+    {
+      url: '/pim/articleDetail',
+      views:
+      {
+        'pimContent':
+        {
+          templateUrl: 'components/pim/article/articleDetail.html',
+          controller: 'articleDetailController as controller'
+        }
+      }
+    });
+
+    $stateProvider.state( 'pim.attributeCare',
+    {
+      url: '/pim/attributeCare',
+      views:
+      {
+        'pimContent':
+        {
+          templateUrl: 'components/pim/attributes/attributeCare.html',
+          controller: 'attributeCareController as controller'
+        }
+      }
+    });
   }
 })();
 

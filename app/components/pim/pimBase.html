@@ -1,0 +1,26 @@
+<md-sidenav class="site-sidenav md-sidenav-left" md-whiteframe="4" md-component-id="main-menu" md-is-locked-open="$mdMedia('gt-sm')">
+  <md-toolbar md-whiteframe="4" class="md-tall">
+    <div class="md-toolbar-tools">
+      <h3>PIM</h3>
+    </div>
+  </md-toolbar>
+  <md-list>
+    <md-list-item ui-sref="pim.articleList" md-ink-ripple>
+      <md-icon md-font-set="material-icons">view_list</md-icon>
+      <p translate="dict.article_care"></p>
+    </md-list-item>
+    <md-list-item ui-sref="pim.attributeCare" md-ink-ripple>
+      <md-icon md-font-set="material-icons">widgets</md-icon>
+      <p translate="dict.attribute_care"></p>
+    </md-list-item>
+  </md-list>
+</md-sidenav>
+<div flex layout="column" tabIndex="-1" role="main">
+  <md-toolbar  md-whiteframe="4">
+    <div class="md-toolbar-tools">
+      <h3>Angular Material - Starter App</h3>
+    </div>
+  </md-toolbar>
+  <md-content flex id="content" ui-view="pimContent">
+  </md-content>
+</div>

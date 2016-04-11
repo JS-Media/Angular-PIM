@@ -18,48 +18,21 @@
         <md-button class="md-icon-button" hide-gt-sm ng-click="controller.toggleMainSideMenu()" aria-label="Toggle Menu">
           <md-icon md-font-set="material-icons">menu</md-icon>
         </md-button>
-        <a ng-href="#" id="home">
+        <h2 id="home" ui-sref="dashboard" md-ink-ripple>
           <md-icon class="size-36" md-svg-src="img/mjs-w.svg"></md-icon>
-        </a>
-        <h2>Media JS</h2>
+          Media JS
+        </h2>
+        <md-button aria-label="PIM" ui-sref="pim.articleList">
+          PIM
+        </md-button>
         <span flex></span>
         <md-button class="md-icon-button" aria-label="Favorite">
           <md-icon md-font-set="material-icons">more_vert</md-icon>
         </md-button>
       </div>
     </md-toolbar>
-    <div layout="row">
-      <md-sidenav class="site-sidenav md-sidenav-left" md-whiteframe="4" md-component-id="main-menu" ng-click="ul.toggleList()" aria-label="Show User List" md-is-locked-open="$mdMedia('gt-sm')">
-        <md-toolbar md-whiteframe="4" class="md-tall">
-          <div class="md-toolbar-tools">
-            <h3>PIM</h3>
-          </div>
-        </md-toolbar>
-        <md-list>
-          <md-list-item ng-repeat="it in ul.users">
-            <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }">
-              <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
-              {{it.name}}
-            </md-button>
-          </md-list-item>
-        </md-list>
-      </md-sidenav>
-      <div flex layout="column" tabIndex="-1" role="main">
-        <md-toolbar  md-whiteframe="4">
-          <div class="md-toolbar-tools">
-            <h3>Angular Material - Starter App</h3>
-          </div>
-        </md-toolbar>
-        <md-content flex id="content">
-          <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
-          <h2>{{ul.selected.name}}</h2>
-          <p>{{ul.selected.content}}</p>
-          <md-button class="contact" md-no-ink ng-click="ul.makeContact(ul.selected)" aria-label="Share with {{ ul.selected.name }}">
-            <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
-            <md-icon md-svg-icon="share"></md-icon>
-          </md-button>
-        </md-content>
-      </div>
+    <div layout="row" flex ui-view="mainApplication">
+
     </div>
 
     <script src="libs/angular.js"></script>
@@ -72,6 +45,11 @@
     <script src="i8ln/de_DE.js"></script>
     <script src="app.js"></script>
     <script src="components/appBar/appBarController.js"></script>
+
+    <script src="components/pim/pimBaseController.js"></script>
+    <script src="components/pim/article/articleListController.js"></script>
+    <script src="components/pim/article/articleDetailController.js"></script>
+    <script src="components/pim/attributes/attributeCareController.js"></script>
   </body>
 </html>
 

@@ -1,10 +1,13 @@
 /******************************
  * Menu
  *****************************/
-#home
+#home md-icon
 {
-  padding-right: 8px;
-  margin-right: 6px;
+  margin-right: 14px;
+}
+
+md-sidenav > md-list > md-list-item > a.md-button{
+  margin: 0;
 }
 
 /******************************

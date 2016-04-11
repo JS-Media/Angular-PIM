@@ -15,6 +15,8 @@ var translation_de_DE = (function()
   dict.article_number = 'Artikelnummer';
   dict.article_description = 'Artikelbeschreibung';
   dict.articlesearch = 'Artikelsuche';
+  dict.article_care = 'Artikelpflege';
+  dict.attribute_care = 'Attributspflege';
   
   dict.back = 'Zurück';
 

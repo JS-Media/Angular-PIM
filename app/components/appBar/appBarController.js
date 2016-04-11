@@ -10,7 +10,7 @@
 
   function AppBarController( $translate, $mdSidenav )
   {
-    var that               = this;
+    var that = this;
     this.toggleMainSideMenu = toggleMainSideMenu;
     
     function toggleMainSideMenu()
